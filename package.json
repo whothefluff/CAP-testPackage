@@ -2,9 +2,9 @@
   "name": "@whothefluff/CAP-testPackage",
   "version": "1.0.0",
   "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "repository": "git://github.com/whothefluff/CAP-testPackage.git",
   "license": "UNLICENSED",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@sap/cds": "^5",
     "express": "^4"
