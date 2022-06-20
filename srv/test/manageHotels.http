@@ -1,0 +1,49 @@
+POST http://localhost:4004/manage-hotels/Hotels HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Test1"
+}
+
+###
+
+PATCH http://localhost:4004/manage-hotels/Hotels/9c20de17-ec41-4b47-9b5e-91b6f3383aa2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "rooms": [
+    {
+      "number": 1001,
+      "pricePerNight": 35,
+      "currency_code": "EUR",
+      "numberOfBeds": 1
+    },
+    {
+      "number": 1002,
+      "pricePerNight": 50,
+      "currency_code": "EUR",
+      "numberOfBeds": 1
+    }
+  ]
+}
+
+###
+
+POST http://localhost:4004/manage-hotels/Hotels HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Test2",
+  "rooms": [
+    {
+      "number": 1003,
+      "pricePerNight": 85,
+      "currency_code": "EUR",
+      "numberOfBeds": 1
+    }
+  ]
+}
+
+###
+
+http://localhost:4004/manage-hotels/Hotels?$expand=rooms HTTP/1.1
